@@ -115,13 +115,11 @@ public class Help extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        txt_guide = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(51, 102, 255));
         jButton3.setText("Home");
@@ -135,7 +133,6 @@ public class Help extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton2.setText("Close");
         jButton2.setToolTipText("Close The Window");
@@ -148,7 +145,6 @@ public class Help extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(255, 255, 255));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton6.setForeground(new java.awt.Color(51, 0, 51));
         jButton6.setText("Current date:");
@@ -166,7 +162,6 @@ public class Help extends javax.swing.JFrame {
 
         txt_date.setText("jLabel25");
 
-        jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton4.setForeground(new java.awt.Color(0, 51, 51));
         jButton4.setText("Time:");
@@ -195,13 +190,9 @@ public class Help extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(102, 51, 255));
         jLabel3.setText("3. Only Admin can able to Delete any data from database.");
 
-        jLabel7.setText("9. For any help Please Email me: sksubrata96@gmail.com");
-
         jLabel2.setText("2. Choice any Option for Data insert,Delete,Update,Save to database.");
 
         jLabel5.setText("5. You can Search Data from a Large number data. ");
-
-        jLabel9.setText("10. For Update version.Stay With me.");
 
         jLabel10.setText("7. ID must be Unique and it is 5 Digits for Students and 4 Digits for Teachers+Employees");
 
@@ -261,15 +252,6 @@ public class Help extends javax.swing.JFrame {
                 .addGap(18, 18, 18))
         );
 
-        txt_guide.setBackground(new java.awt.Color(0, 204, 255));
-        txt_guide.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txt_guide.setText("User Guide");
-        txt_guide.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_guideActionPerformed(evt);
-            }
-        });
-
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setText("OK");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -289,14 +271,10 @@ public class Help extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(223, 223, 223)
-                .addComponent(txt_guide)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(37, 37, 37))
+                .addGap(77, 77, 77))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -305,9 +283,7 @@ public class Help extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txt_guide)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(41, 41, 41)
                 .addComponent(jButton1)
                 .addGap(6, 6, 6))
         );
@@ -405,23 +381,6 @@ public class Help extends javax.swing.JFrame {
     e.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void txt_guideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_guideActionPerformed
-        try {
-            
-           
-            String URI="https://www.dropbox.com/s/lqgtqxnm60qr3qw/index.html?dl=0";
-            
-            //https://www.dropbox.com/sh/wq82naazidry7sz/AABniHUPfBKtLMwSIhwwxZhna?dl=0
-            java.awt.Desktop.getDesktop().browse(java.net.URI.create(URI));
-            
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Sorry!!!Unable to Open Web link.");
-        }
-        
-        
-        
-    }//GEN-LAST:event_txt_guideActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -480,7 +439,6 @@ public class Help extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JLabel txt_date;
-    private javax.swing.JButton txt_guide;
     private javax.swing.JLabel txt_time;
     // End of variables declaration//GEN-END:variables
 }
