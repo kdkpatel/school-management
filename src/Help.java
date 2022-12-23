@@ -26,7 +26,7 @@ public class Help extends javax.swing.JFrame {
     PreparedStatement pst=null;
     public Help() {
         initComponents();
-       conn=javaconnect.connerDb();
+       conn=DatabaseOperations.initDatabase();
        CurrentDate();
     }
     

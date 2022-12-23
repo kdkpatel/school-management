@@ -25,7 +25,7 @@ public class All_Employees_Data_Details extends javax.swing.JFrame {
     public All_Employees_Data_Details() {
         initComponents();
         
-        conn=javaconnect.connerDb();
+        conn=DatabaseOperations.initDatabase();
         Update_table();
     }
     

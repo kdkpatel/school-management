@@ -23,7 +23,7 @@ public class Employees_Infromation_System extends javax.swing.JFrame {
     
     public Employees_Infromation_System() {
         initComponents();
-       conn=javaconnect.connerDb();
+       conn=DatabaseOperations.initDatabase();
        CurrentDate();
     }
     
@@ -626,66 +626,65 @@ public class Employees_Infromation_System extends javax.swing.JFrame {
     }//GEN-LAST:event_cmd_tdeleteActionPerformed
 
     private void cmd_tsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmd_tsaveActionPerformed
-        // TODO add your handling code here:
-
-        int p=JOptionPane.showConfirmDialog(null, "Are you Sure to Save?","Save",JOptionPane.YES_NO_OPTION);
-        if(p==0)
-        {
-            try {
-
-                String sql="insert into employee_info (Employee_id,First_name,Last_name,Position,Birth_day,Mobile_no,Sex,Permanent,Present) values(?,?,?,?,?,?,?,?,?)";
-
-                pst=conn.prepareStatement(sql);
-
-                pst.setString(1, txt_teacher_ID.getText());
-                pst.setString(2, txt_firstname.getText());
-                pst.setString(3, txt_lastname.getText());
-                pst.setString(4, txt_position.getText());
-                pst.setString(5, txt_birthday.getText());
-                pst.setString(6, txt_mobile.getText());
-                pst.setString(7, txt_sex.getText());
-                pst.setString(8, txt_permanent.getText());
-                pst.setString(9, txt_present.getText());
-
-                pst.execute();
-                JOptionPane.showMessageDialog(null, "Data Saved Successfully.");
-
-            } catch (Exception e) {
-
-                JOptionPane.showMessageDialog(null, "We face a Problem.");
+        int p = JOptionPane.showConfirmDialog(null, "Are you Sure to Save?","Save",JOptionPane.YES_NO_OPTION);
+        if (p == 0) {
+            if (DatabaseOperations.addEntry(
+                    "employee_info", 
+                    "Employee_id", 
+                    txt_teacher_ID.getText(), 
+                    txt_firstname.getText(),
+                    txt_lastname.getText(),
+                    txt_position.getText(),
+                    txt_birthday.getText(),
+                    txt_mobile.getText(),
+                    txt_sex.getText(),
+                    txt_permanent.getText(),
+                    txt_present.getText()
+                )
+            ) {
+                JOptionPane.showMessageDialog(null, "Entry saved successfully.");
+            } else if (DatabaseOperations.updateEntry(
+                    "employee_info", 
+                    "Employee_id", 
+                    txt_teacher_ID.getText(), 
+                    txt_firstname.getText(),
+                    txt_lastname.getText(),
+                    txt_position.getText(),
+                    txt_birthday.getText(),
+                    txt_mobile.getText(),
+                    txt_sex.getText(),
+                    txt_permanent.getText(),
+                    txt_present.getText()
+                )
+            ) {
+                JOptionPane.showMessageDialog(null, "Entry saved successfully.");
+            } else {
+                JOptionPane.showMessageDialog(null, "Unable to perform operation.");
             }
-
         }
     }//GEN-LAST:event_cmd_tsaveActionPerformed
 
     private void txt_tupdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_tupdateActionPerformed
-        // TODO add your handling code here:
-
-        int p=JOptionPane.showConfirmDialog(null, "Are you Sure to Update?","Update",JOptionPane.YES_NO_OPTION);
-        if(p==0)
+        int p = JOptionPane.showConfirmDialog(null, "Are you Sure to Update?","Update",JOptionPane.YES_NO_OPTION);
+        if(p == 0)
         {
-            try {
-
-                String value1=txt_teacher_ID.getText();
-                String value2=txt_firstname.getText();
-                String value3=txt_lastname.getText();
-                String value4=txt_position.getText();
-                String value6=txt_birthday.getText();
-                String value7=txt_mobile.getText();
-                String value8=txt_sex.getText();
-                String value9=txt_permanent.getText();
-                String value10=txt_present.getText();
-
-                String sql="Update employee_info set Employee_id='"+value1+"',First_name='"+value2+"',Last_name='"+value3+"',Position='"+value4+"',Birth_day='"+value6+"',Mobile_no='"+value7+"',Sex='"+value8+"',permanent='"+value9+"',Present='"+value10+"' where Employee_id='"+value1+"'";
-
-                pst=conn.prepareStatement(sql);
-                pst.execute();
-
-                JOptionPane.showMessageDialog(null,"Table Updated Successfully.");
-
-            } catch (Exception e) {
-
-                JOptionPane.showMessageDialog(null,"We face a Problem.");
+            if (DatabaseOperations.updateEntry(
+                    "employee_info", 
+                    "Employee_id", 
+                    txt_teacher_ID.getText(), 
+                    txt_firstname.getText(),
+                    txt_lastname.getText(),
+                    txt_position.getText(),
+                    txt_birthday.getText(),
+                    txt_mobile.getText(),
+                    txt_sex.getText(),
+                    txt_permanent.getText(),
+                    txt_present.getText()
+                )
+            ) {
+                JOptionPane.showMessageDialog(null, "Entry saved successfully.");
+            } else {
+                JOptionPane.showMessageDialog(null, "Unable to perform operation.");
             }
         }
 

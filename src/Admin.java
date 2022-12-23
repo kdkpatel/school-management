@@ -17,7 +17,7 @@ public class Admin extends javax.swing.JFrame {
      */
     public Admin() {
         initComponents();
-        conn=javaconnect.connerDb();
+        conn=DatabaseOperations.initDatabase();
     }
     
     public  void close()

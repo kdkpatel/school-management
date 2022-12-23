@@ -18,7 +18,7 @@ public class All_Teachers_data_details extends javax.swing.JFrame {
      */
     public All_Teachers_data_details() {
         initComponents();
-        conn=javaconnect.connerDb();
+        conn=DatabaseOperations.initDatabase();
         Update_table();
     }
 

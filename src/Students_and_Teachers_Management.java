@@ -25,7 +25,7 @@ public class Students_and_Teachers_Management extends javax.swing.JFrame {
         initComponents();
         
                 
-        conn=javaconnect.connerDb();
+        conn=DatabaseOperations.initDatabase();
         CurrentDate();
     }
     

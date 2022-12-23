@@ -15,7 +15,7 @@ public class Login_frame extends javax.swing.JFrame {
     public Login_frame() {
         initComponents();
         
-        conn=javaconnect.connerDb();
+        conn=DatabaseOperations.initDatabase();
     }
     
     
