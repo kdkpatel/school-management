@@ -2,6 +2,7 @@ import java.awt.HeadlessException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
@@ -70,7 +71,7 @@ public class DatabaseOperations {
         }
     }
     
-    public static boolean addEntryStudent(
+    public static boolean addStudent(
         String rollNo,
         String firstName,
         String lastName,
@@ -140,7 +141,7 @@ public class DatabaseOperations {
         }
     }
     
-    public static boolean updateEntryStudent(
+    public static boolean updateStudent(
         String rollNo,
         String firstName,
         String lastName,
@@ -173,6 +174,29 @@ public class DatabaseOperations {
         } catch (HeadlessException | SQLException e) {
             return false;
         }
+    }
+    
+    public static ResultSet fetchStudent(String query) {
+        ResultSet rs;
+        PreparedStatement pst;
+        
+        String[] keys = new String[] { "Roll", "First_name", "Last_name", "Birth_date", "Mobile_no" };
+        for (String key : keys) {
+            try {
+                String sql = "select * from student_info where " + key + "=?";
+                pst = conn.prepareStatement(sql);
+                pst.setString(1, query);
+                rs = pst.executeQuery();
+                if (rs.next()) { 
+                    return rs;
+                } else {
+                    continue;
+                }
+            } catch (SQLException e) {
+                continue;
+            }
+        }
+        return null;
     }
 }
   
