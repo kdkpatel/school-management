@@ -17,12 +17,10 @@ public class javaconnect
           //  Connection conn=DriverManager.getConnection("jdbc:sqlite:student_database.sqlite");
             
             return conn;
-        } catch (Exception e) {
-            
+        } catch (Exception e) {            
             JOptionPane.showMessageDialog(null, "Database Conncetion Problem.");
         }
         return null;
-    }
-            
+    }  
 }
   

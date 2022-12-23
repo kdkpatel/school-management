@@ -130,13 +130,13 @@ public class Students_and_Teachers_Management extends javax.swing.JFrame {
         txt_teacher_management.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_teacher_management.setForeground(new java.awt.Color(0, 0, 255));
         txt_teacher_management.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Teacher-male-icon.png"))); // NOI18N
-        txt_teacher_management.setText("Tearchers");
+        txt_teacher_management.setText("Teachers");
         txt_teacher_management.setToolTipText("Tearcher Management Option-1");
         txt_teacher_management.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 txt_teacher_managementAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -145,13 +145,13 @@ public class Students_and_Teachers_Management extends javax.swing.JFrame {
         txt_student_management.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_student_management.setForeground(new java.awt.Color(0, 153, 51));
         txt_student_management.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Student-3-icon.png"))); // NOI18N
-        txt_student_management.setText("Srudents");
+        txt_student_management.setText("Students");
         txt_student_management.setToolTipText("Srudent Management Option-2");
         txt_student_management.addAncestorListener(new javax.swing.event.AncestorListener() {
-            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
-            }
             public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
                 txt_student_managementAncestorAdded(evt);
+            }
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
             }
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
@@ -165,7 +165,6 @@ public class Students_and_Teachers_Management extends javax.swing.JFrame {
         jLabel4.setText("NB: By Click to choice  one");
         jLabel4.setToolTipText("NB: By Click to choice  one");
 
-        txt_teachers.setBackground(new java.awt.Color(255, 255, 255));
         txt_teachers.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_teachers.setForeground(new java.awt.Color(0, 51, 51));
         txt_teachers.setText("Teachers");
@@ -176,7 +175,6 @@ public class Students_and_Teachers_Management extends javax.swing.JFrame {
             }
         });
 
-        txt_students.setBackground(new java.awt.Color(255, 255, 255));
         txt_students.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_students.setForeground(new java.awt.Color(0, 51, 51));
         txt_students.setText("Students");
@@ -191,7 +189,6 @@ public class Students_and_Teachers_Management extends javax.swing.JFrame {
 
         txt_time.setText("Time:");
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(51, 0, 51));
         jButton2.setText("Current date:");
@@ -202,7 +199,6 @@ public class Students_and_Teachers_Management extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(0, 51, 51));
         jButton3.setText("Time:");
@@ -213,7 +209,6 @@ public class Students_and_Teachers_Management extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton4.setForeground(new java.awt.Color(0, 0, 102));
         jButton4.setText("Close");
@@ -224,7 +219,6 @@ public class Students_and_Teachers_Management extends javax.swing.JFrame {
             }
         });
 
-        txt_me.setBackground(new java.awt.Color(255, 255, 255));
         txt_me.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         txt_me.setForeground(new java.awt.Color(51, 0, 51));
         txt_me.setText("About me");
@@ -241,7 +235,6 @@ public class Students_and_Teachers_Management extends javax.swing.JFrame {
         jLabel2.setText("Employees");
         jLabel2.setToolTipText("Employee Management Option-3");
 
-        txt_Employee.setBackground(new java.awt.Color(255, 255, 255));
         txt_Employee.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_Employee.setForeground(new java.awt.Color(51, 51, 51));
         txt_Employee.setText("Employees");
@@ -251,7 +244,6 @@ public class Students_and_Teachers_Management extends javax.swing.JFrame {
             }
         });
 
-        txt_help.setBackground(new java.awt.Color(255, 255, 255));
         txt_help.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txt_help.setText("Help");
         txt_help.addActionListener(new java.awt.event.ActionListener() {
